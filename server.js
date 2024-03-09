@@ -6,7 +6,7 @@ require('dotenv').config();
 const app = express()
 const PORT = process.env.PORT || 5000
 
-mongoose.connect("mongodb+srv://paawanbarach:e4SSCy3HZLRrHSiB@clipboard.ykegl6h.mongodb.net/clipboard?retryWrites=true&w=majority&appName=Clipboard", {
+mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
